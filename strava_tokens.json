@@ -1,0 +1,30 @@
+{
+    "token_type": "Bearer",
+    "expires_at": 1772599836.1302404,
+    "expires_in": 21600,
+    "refresh_token": "6339c82fc607b1e298bfe6ff3fd79562677f8aa0",
+    "access_token": "4652b9c10ed5952acc800076a8aface6ffb47f64",
+    "athlete": {
+        "id": 29565604,
+        "username": null,
+        "resource_state": 2,
+        "firstname": "Samuel",
+        "lastname": "McKelvey",
+        "bio": "Trying to get back into riding after bypass surgery in 2017, but the coronavirus has had a really adverse impact on my ability to get sufficient exercise.",
+        "city": "Frontenac",
+        "state": "KS",
+        "country": null,
+        "sex": "M",
+        "premium": true,
+        "summit": true,
+        "created_at": "2018-04-06T18:04:32Z",
+        "updated_at": "2026-03-03T22:49:08Z",
+        "badge_type_id": 1,
+        "weight": 102.058,
+        "profile_medium": "https://graph.facebook.com/1774554769233410/picture?height=256&width=256",
+        "profile": "https://graph.facebook.com/1774554769233410/picture?height=256&width=256",
+        "friend": null,
+        "follower": null
+    },
+    "timestamp": "2026-03-03T16:50:36.130240"
+}

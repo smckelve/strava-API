@@ -1,0 +1,24 @@
+Explanation of the Tests
+Setup and Teardown:
+
+Mock environment variables in setUp to ensure consistent test conditions.
+tearDown stops the mock to avoid interference with other tests.
+Token Management:
+
+test_load_tokens: Validates that tokens are correctly loaded from a file.
+test_save_tokens: Checks that tokens are saved correctly, including adding a timestamp.
+Token Refresh:
+
+test_refresh_token: Simulates the token refresh flow and validates the new token.
+Athlete Info Retrieval:
+
+test_get_athlete_info_refresh: Tests fetching athlete info when a token refresh is needed.
+test_get_athlete_info_valid_token: Tests fetching athlete info with a valid token.
+Token Expiry:
+
+test_is_token_expired_no_token: Ensures a missing token is recognized as expired.
+test_is_token_expired_expired_token: Validates that an expired token is detected.
+test_is_token_expired_valid_token: Confirms that a valid token is not marked as expired.
+
+These tests use unittest.mock to simulate file I/O and HTTP requests, ensuring they remain isolated and fast. 
+They cover key parts of the StravaAuth class functionality.
