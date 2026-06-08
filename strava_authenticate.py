@@ -1,6 +1,12 @@
+import os
+
+# Strava returns granted scopes in a different format/order than requested
+# (e.g. "read activity:read_all profile:read_all" vs "profile:read_all,activity:read_all"),
+# which oauthlib treats as a scope mismatch and rejects unless relaxed.
+os.environ.setdefault('OAUTHLIB_RELAX_TOKEN_SCOPE', '1')
+
 from requests_oauthlib import OAuth2Session
 from dotenv import load_dotenv
-import os
 import json
 from typing import Dict, Tuple, Any
 from datetime import datetime, timedelta
