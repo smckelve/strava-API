@@ -3,6 +3,7 @@ from unittest.mock import patch, MagicMock, mock_open
 from datetime import datetime, timedelta
 import json
 from strava_authenticate import StravaAuth
+from project import get_athlete_info
 
 class TestStravaAuth(unittest.TestCase):
     def setUp(self) -> None:
@@ -80,7 +81,7 @@ class TestStravaAuth(unittest.TestCase):
             text = json.dumps({"firstname": "Test", "lastname": "User"})
         )
 
-        status_code, reason, athlete_info = self.auth.get_athlete_info()
+        status_code, reason, athlete_info = get_athlete_info(self.auth)
 
         self.assertEqual(status_code, 200)
         self.assertEqual(reason, "OK")
@@ -97,7 +98,7 @@ class TestStravaAuth(unittest.TestCase):
             text = json.dumps({"firstname": "Valid", "lastname": "Token"})
         )
 
-        status_code, reason, athlete_info = self.auth.get_athlete_info()
+        status_code, reason, athlete_info = get_athlete_info(self.auth)
 
         self.assertEqual(status_code, 200)
         self.assertEqual(reason, "OK")
